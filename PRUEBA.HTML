@@ -1,0 +1,35 @@
+<head>
+
+
+
+</head>
+
+<body>
+    <label for="cars">Choose a car:</label>
+    <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
+    <select name="matr" id="matr">
+        <option value="1234">1234</option>
+        <option value="5678">5678</option>
+        <option value="8765">8765</option>
+        <option value="4321">4321</option>
+    </select>
+
+    <button onclick="callJob()">Coche</button>
+
+    <script>
+        function callJob(){
+            var car={
+                coche:document.getElementById("cars").value,
+                matr:document.getElementById("matr").value
+        };
+            var mycar=JSON.stringify(car);
+            alert(typeof(mycar));
+        }
+    </script>
+</body>
+
